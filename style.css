@@ -1,0 +1,31 @@
+:root {
+  --paper: #F5F6F4; --surface: #FFFFFF; --ink: #15191A; --muted: #55605F; --line: #D9DEDC; --accent: #B4432B;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #0E1112; --surface: #191E1F; --ink: #F1F4F3; --muted: #9DA9A7; --line: #2B3233; --accent: #FF9A7A; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+.hero { max-width: 720px; margin: 0 auto; padding: 44px 20px 0; text-align: center; }
+.mark { display: inline-block; width: 72px; height: 72px; border-radius: 16px; }
+.hero h1 { font-family: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 800; font-size: 42px; letter-spacing: -0.5px; margin: 14px 0 2px; }
+.hero p { margin: 0; color: var(--muted); }
+nav { margin-top: 22px; padding: 10px 0; font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase;
+  border-top: 1px solid var(--line); border-bottom: 2px solid var(--ink); }
+nav a { color: var(--ink); text-decoration: none; display: inline-block; margin: 0 10px; padding: 4px 0; }
+nav a:hover, nav a[aria-current="page"] { color: var(--accent); }
+main { max-width: 720px; margin: 0 auto; padding: 24px 20px 64px; }
+h2 { font-weight: 800; font-size: 28px; line-height: 1.25; margin: 28px 0 8px; }
+h3 { font-weight: 700; font-size: 20px; margin: 28px 0 4px; padding-top: 18px; border-top: 1px solid var(--line); }
+a { color: var(--accent); }
+ol, ul { padding-left: 22px; }
+li { margin: 4px 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 18px 22px; margin: 18px 0; }
+.cols { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .cols { grid-template-columns: 1fr 1fr; } }
+.cols .card { margin: 0; }
+.cols h3 { border: 0; padding: 0; margin: 0 0 6px; }
+.muted { color: var(--muted); font-size: 15px; }
+footer { max-width: 720px; margin: 0 auto; text-align: center; color: var(--muted); font-size: 14px; padding: 20px; border-top: 2px solid var(--ink); }
